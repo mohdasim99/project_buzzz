@@ -1,0 +1,1190 @@
+body{
+    margin: 0 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --bg-color : rgba(218, 227, 218, 0.6);
+    --shadow-color : rgba(141, 140, 140, 0.8);
+    --grey-dark : rgb(108, 104, 104);
+    --grey-light : rgb(154, 147, 147);
+    --grey-xl-light : rgba(206, 200, 200, 0.5);
+    --link-color : #417af5;
+    --theme-color : rgb(156, 56, 233);
+    --theme-shadow : rgba(156, 56, 233, 0.5);
+}
+
+.topbar-container{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    background-color: white;
+    top: 0;
+    box-shadow: 0px 2px 5px var(--shadow-color);
+}
+.topbar-left{
+    flex: 9;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.logo-img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+.logo-text{
+    font-size: 24px;
+    margin-left: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+.topbar-right{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+.topbar-user{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.topbar-img{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.topbar-username{
+    font-weight: bold;
+    margin-left: 5px;
+}
+.topbar-icons{
+    display: flex;
+}
+.topbar-icon{
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--bg-color);
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topbar-icon-badge{
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+
+/* ########################## timeline container ##########################*/
+
+.feed-container{
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-color);
+    padding-bottom: 40px;
+}
+.leftbar{
+    flex: 3;
+}
+.timeline{
+    flex: 6;
+    /* background-color: antiquewhite; */
+}
+.rightbar{
+    flex: 3;
+}
+/*----------leftsidebar profile section---------*/
+.small-profile{
+    border-radius: 8px;
+    width: 65%;
+    margin-left: 30%;
+    margin-top: 3rem;
+    text-align: center;
+    background-color: white;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+    cursor: pointer;
+}
+.small-profile-cover{
+    height: 140px;
+    position: relative;
+}
+.cover-img{
+    height: 90px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+.user-img{
+    height: 90px;
+    width: 35%;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 40px;
+    border: 3px solid white;
+}
+.small-profile-username{
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: black;
+}
+.small-profile-desc{
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: var(--grey-dark);
+}
+.small-profile-data{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+.small-profile-data1{
+    padding-right: 20px;
+    border-right: 2px solid rgba(154, 147, 147, 0.5);
+}
+.small-profile-number{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--grey-dark);
+}
+.small-profile-text{
+    font-size: 14px;
+    color: var(--grey-light);
+}
+
+
+/* ------------- left sidebar utility section ------------*/
+
+.utility-wrapper{
+    border-radius: 8px;
+    width: 65%;
+    margin-left: 30%;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+}
+.utility-name{
+    padding: 15px 0 5px 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.sidebar-list{
+    padding-left: 15px;
+    list-style: none;
+    margin-bottom: 0;
+}
+.sidebar-list-item{
+    padding-bottom: 12px;
+}
+.sidebar-list-item i{
+    padding-right: 10px;
+    cursor: pointer;
+}
+.sidebar-list-text{
+    color: var(--grey-dark);
+    font-size: 12px;
+    cursor: pointer;
+}
+.show-more-link{
+    padding: 0 0 25px 15px;
+    color: var(--link-color);
+    cursor: pointer;
+    font-size: 13px;
+}
+.show-more-link span{
+    padding-left: 10px;
+}
+hr{
+    width: 87%;
+    height: 2px;
+    background-color: var(--grey-xl-light);
+    border: none;
+}
+
+
+/*----------- right sidebar contact section --------------*/
+
+.contact-wrapper{
+    border-radius: 8px;
+    width: 65%;
+    height: 430px;
+    overflow: auto;
+    margin-left: 5%;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+    padding: 10px 0;
+    position: relative;
+}
+.contact-wrapper::-webkit-scrollbar{
+    width: 20px;
+}
+.contact-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--grey-xl-light);
+    border-radius: 100vh;
+    border: 7px solid white;
+}
+.contact-wrapper::-webkit-scrollbar-thumb:hover{
+    background-color: var(--grey-light);
+}
+.contact-wrapper::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 8px;
+}
+.contact-list{
+    padding-left: 15px;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.contact-list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+.contact-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.contact-list-item span{
+    margin-left: 12px;
+    color: var(--grey-dark);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.contact-badge{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 13px;
+}
+.search-box{
+    border-radius: 50px;
+    height: 35px;
+    background-color: var(--bg-color);
+    position: absolute;
+    right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-txt{
+    width: 0;
+    padding: 0;
+    height: 35px;
+    font-size: 14px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: var(--grey-dark);
+    background-color: var(--bg-color);
+    transition: all 0.3s linear;
+}
+.search-btn{
+    text-decoration: none;
+    width: 35px;
+    height: 35px;
+    color: var(--grey-dark);
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    display: grid;
+    place-items: center;
+}
+.search-box:hover > .search-txt{
+    width: 170px;
+    padding: 0 15px;
+    box-shadow: 0px 3px 7px var(--shadow-color);
+}
+.z{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.contact-title{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/*----------- right sidebar suggestion section --------------*/
+
+.suggestion-wrapper{
+    border-radius: 8px;
+    width: 65%;
+    height: 430px;
+    overflow: auto;
+    margin-left: 5%;
+    margin-top: 3rem;
+    background-color: white;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+    padding: 10px 0;
+    position: relative;
+}
+.suggestion-wrapper::-webkit-scrollbar{
+    width: 20px;
+}
+.suggestion-wrapper::-webkit-scrollbar-thumb{
+    background-color: var(--grey-xl-light);
+    border-radius: 100vh;
+    border: 7px solid white;
+}
+.suggestion-wrapper::-webkit-scrollbar-thumb:hover{
+    background-color: var(--grey-light);
+}
+.suggestion-wrapper::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 8px;
+}
+.suggestion-list{
+    padding-left: 15px;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.suggestion-list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+.suggestion-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.suggestion-name{
+    margin-left: 12px;
+    color: var(--grey-dark);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.suggestion-badge{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    bottom: -2px;
+    left: 27px;
+}
+.friend-link{
+    color: #417af5;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.x{
+    width: 162px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*-------------- timeline post input --------------------*/
+.timeline-search{
+    margin: 3rem 2rem;
+    border-radius: 8px;
+    background-color: white;
+    padding: 14px;
+    position: sticky;
+    box-shadow: 4px 4px 8px var(--shadow-color);
+}
+.timeline-search-wrapper{
+    display: flex;
+    /* delete below height after removng bootsrap */
+    /* height: 72px; */
+}
+.post-user-img{
+    height: 72px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.post-input{
+    background-color: var(--bg-color);
+    width: 400px;
+    height: 52px;
+    /* delete below height after removng bootsrap and uncomment above height */
+    /* height: 72px;          */
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    
+    margin-right: 30px;
+    resize: none;
+}
+.timeline-search-wrapper i{
+    font-size: 20px;
+    color: rgb(11, 192, 11);
+    cursor: pointer;
+    margin-top: 4px;
+}
+.photo-video{
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.y button{
+    margin-top: 16px;
+    padding: 5px 15px;
+    font-weight: 600;
+    border: none;
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.post-input::-webkit-scrollbar{
+    display: none;
+}
+
+
+/*----------------- timeline post area ----------------*/
+
+.timeline-post-area{
+    height: 1000px;
+    overflow: auto;
+    margin: 3rem 2rem;
+    border-radius: 8px;
+}
+.timeline-post-area::-webkit-scrollbar{
+    display: none;
+}
+.timeline-post-wrapper{
+    padding: 14px;
+    background-color: white;
+    box-shadow: 2px 2px 4px var(--shadow-color);
+    margin-bottom: 3rem;
+    border-radius: 8px;
+}
+.post-top-section{
+    display: flex;
+    justify-content: space-between;
+}
+.post-top-left{
+    display: flex;
+}
+.post-profile-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.post-username{
+    font-weight: 600;
+    cursor: pointer;
+}
+.post-date{
+    font-size: 12px;
+    color: var(--grey-light);
+    margin-top: 3px;
+}
+.post-top-dots{
+    background-color: var(--bg-color);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.post-caption{
+    font-size: 13px;
+    margin-top: 14px;
+}
+.post-img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: grab;
+}
+.post-reaction-count{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.like-dislike-count i{
+    margin-right: 4px;
+    font-size: 13px;
+    height: 20px;
+    width: 24px;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.solid-thumbs-up{
+    background-color: var(--link-color);
+}
+.solid-thumbs-down{
+    background-color: rgba(252, 5, 5,0.8);
+}
+.count{
+    margin-right: 20px;
+    font-size: 13px;
+    color: var(--grey-dark);
+}
+.comment-count{
+    font-size: 13px;
+    color: var(--grey-dark);
+}
+.post-hr{
+    width: 100%;
+}
+.post-reaction-icon{
+    display: flex;
+    justify-content: space-around;
+    color: var(--grey-dark);
+    margin: 10px 0;
+}
+.post-reaction-icon i{
+    margin-right: 8px;
+    cursor: pointer;
+}
+.post-reaction-icon span{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.comment-section{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.comment-profile-img{
+    height: 40px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.comment-input{
+    resize: none;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 25px;
+    border: none;
+    padding-left: 15px;
+    padding-right: 50px;
+}
+.send-icon{
+    position: absolute;
+    z-index: 5;
+    font-size: 20px;
+    right: 15px;
+    top: 8px;
+    color: var(--link-color);
+    cursor: pointer;
+}
+
+
+
+/* ############################################################################################################################################# */
+/* ############################################################################################################################################# */
+
+/* --------------------------------- login page CSS ------------------------------- */
+
+.login-container{
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+.login-container-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    margin: 10vh 8%;
+    border-radius: 8px;
+}
+.signup-section{
+    text-align: center;
+    flex: 6;
+    background-color: white;
+    border-radius: 6px;
+    margin-right: 15px;
+    margin-left: 55px;
+    box-shadow: 8px 8px 12px var(--grey-light);
+    height: 80%;
+}
+.ttn-logo{
+    margin-top: 50px;
+    height: 50px;
+    width: 85px;
+}
+.signup-text{
+    margin: 40px 60px 20px 60px;
+    font-weight: 500;
+    color: var(--grey-dark);
+}
+.signup-section h4{
+    font-weight: 400;
+    color: var(--grey-light);
+}
+.google-btn{
+    margin-top: 50px;
+    color: rgb(221, 44, 156);
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 1px solid rgb(221, 44, 156);
+    background-color: white;
+    cursor: pointer;
+}
+.google-btn:hover{
+    transform: scale(1.02);
+}
+.or{
+    margin: 0 20px;
+    color: var(--grey-light);
+}
+.signin-section{
+    text-align: center;
+    flex: 6;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 15px;
+    margin-right: 55px;
+    box-shadow: 8px 8px 12px var(--grey-light);
+    height: 80%;
+}
+.signin-text{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+.username{
+    width: 350px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--shadow-color);
+    padding: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+.password{
+    width: 350px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--shadow-color);
+    padding: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+[placeholder]{
+    opacity: 0.6;
+}
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.4s 0.4s ease; 
+    text-indent: -100%;
+    opacity: 1;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 13px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    color: var(--grey-light);
+}
+.checkbox-input{
+    height: 15px;
+    width: 15px;
+}
+.forgot-pass a{
+    text-decoration: none;
+    color: rgba(156, 56, 233, 0.5);
+}
+.forgot-pass a:hover{
+    color: var(--theme-color);
+}
+.signin-btn{
+    margin-top: 68px;
+    font-weight: 500;
+    padding: 14px 42px;
+    border-radius: 25px;
+    color: white;
+    background-color: var(--theme-color);
+    border: none;
+    box-shadow: 5px 5px 20px var(--theme-shadow);
+    cursor: pointer;
+}
+.signin-btn:hover{
+    transform: scale(1.02);
+}
+
+
+/* ----------------------------- UserProfile CSS -------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+.user-suggestion-conatiner{
+    background-color: var(--bg-color);
+    height: calc(100vh - 50px);
+    display: flex;
+}
+.user-container{
+    margin: 50px 40px 50px 80px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
+    flex: 9;
+    height: 67%;
+}
+.suggestion-div{
+    flex: 3;
+}
+.user-profile-cover{
+    height: 200px;
+    position: relative;
+}
+.user-cover-img{
+    height: 150px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+.user-profile-img{
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    border: none;
+}
+.user-discription{
+    margin: 10px 0 50px 50px;
+}
+.user-profile-name{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+.user-about{
+    margin-top: 0px;
+    color: var(--grey-dark);
+    font-weight: 500;
+}
+.user-location{
+  color: gray;
+  font-size: small;
+}
+.user-btns{
+  border-radius: 5px;
+  font-family: Montserrat, sans-serif;
+  line-height: 5px;
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+.user-btns:hover{
+  transform: scale(1.02);
+}
+#user-add-frnd{
+    background: var(--link-color);
+    margin-left: 50px;
+    border: none;
+    color: white;
+    padding: 16px;
+}
+#user-visit-website{
+  background: transparent;
+  margin-left: 20px;
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
+}
+.user-btns i{
+    margin-right: 6px;
+}
+
+
+
+/*----------------------------- Admin Profile CSS ---------------------------------*/
+
+.admin-suggestion-conatiner{
+    background-color: var(--bg-color);
+    display: flex;
+    color: var(--grey-dark);
+}
+.admin-container{
+    margin: 50px 40px 50px 80px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.75);
+    flex: 9;
+    height: 100%;
+}
+.admin-profile-cover{
+    height: 200px;
+    position: relative;
+}
+.admin-cover-img{
+    height: 150px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    object-fit: cover;
+}
+.admin-profile-img{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    border: none;
+}
+#upload-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.form-details{
+    margin-top: 30px;
+}
+.admin-profile-name{
+    margin: 10px 0 20px 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+.about{
+    margin-top: -100px;
+    margin-right: 500px;
+    margin-left: 50px;
+    color: gray;
+}
+
+.admin-container i{
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.admin-container i:hover{
+    color: #03bfbc;
+} 
+.admin-container input{
+  height: 35px;
+  border:1px solid #d1d1d1;
+  outline-color: #5a92bb;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.admin-profile-conatiner::placeholder {
+  color: rgb(194, 194, 194);
+  padding: 5px;
+}
+
+.details-input select{
+  height: 40px;
+  color: rgb(194, 194, 194);
+  border:1px solid #d1d1d1;
+  outline-color: #5a92bb;
+}
+#designation{
+  width: 170px;
+  border-radius: 5px;
+  margin-right: 70px;
+}
+#state{
+  width: 7%; 
+  border-radius: 5px;
+  margin-right:15px ;
+}
+.details{
+    margin-left: 50px;
+}
+.details-name{
+    margin-right: 160px; 
+} 
+
+.details-name2{
+    margin-right: 200px;
+}
+.details-name2-lname{
+    margin-left: 5px;
+}
+.details-input{
+    margin-left: 50px;
+} 
+.details-value{
+    margin-right: 70px;
+}
+#details-value2-bday{
+    margin-left: 108px;
+}
+#details-name-brth{
+    margin-left: 30px;
+}
+#details-name-state{
+    margin-left: 52px;
+}
+#details-name-ZIP{
+    margin-left: 50px;
+
+}
+.btn_upload {
+  color: #fff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  z-index: 3;
+  white-space: nowrap;
+  position: absolute;
+  top: 81%;
+  left: 82%;
+}
+.btn_upload input {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 105%;
+  cursor: pointer;
+  opacity: 0;
+}
+.file_uploading {
+  width: 100%;
+  height: 10px;
+  margin-top: 20px;
+  background: #ccc;
+}
+.file_uploading .btn_upload {
+  display: none;
+}
+.radio-toolbar {
+  margin: 0px;
+}
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-toolbar label {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 5px;
+    border: none;
+}
+.radio-toolbar input[type="radio"]:checked + label {
+    background-color: #4dd2ff;
+    border: none;
+    color: white;
+}
+.btns{
+    border-radius: 5px;
+    font-family: Montserrat, sans-serif;
+    cursor: pointer;
+    font-weight: 600;
+}
+#save-btn{
+      color: white;
+      background-color: var(--link-color);
+      margin-left: 50px;
+      height: 42px;
+      width: 70px;
+      padding-left:20px;
+      padding-right: 20px;
+}
+#reset-btn{
+    height: 40px;
+    width: 90px;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: var(--link-color);
+    border-color:  var(--link-color);
+    background: transparent;
+    margin-left: 30px;
+}
+.btns:hover{
+    transform: scale(1.02);
+}
+
+
+
+/*--------------------- SignUp page CSS ----------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+.signup-container{
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+.signup-box {
+  position: relative;
+  margin: 3% auto;
+  width: 800px;
+  height: 580px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px var(--shadow-color);
+}
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 40px;
+  width: 400px;
+  height: 400px;
+}
+.left h1 {
+    font-family: 'Roboto', sans-serif;
+  margin: 0 0 20px 0;
+  font-size: 30px;
+  color: var(--theme-color);
+  font-weight: normal;
+}
+.left input[type="text"], .left input[type="email"], .left input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 340px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+.left input[type="text"]:focus, .left input[type="password"]:focus {
+  border-bottom: 2px solid #9933ff;
+  transition: 0.2s ease;
+}
+.agreement-div{
+    display: flex;
+    align-items: center;
+}
+#agreement{
+    height: 14px;
+    width: 14px;
+}
+.left label{
+    font-size: 13px;
+}
+.agreement-div a{
+    color: var(--theme-color);
+}
+.register-btn {
+  margin-top: 28px;
+  padding: 15px 35px;
+  background-color: var(--theme-color);
+  border: none;
+  border-radius: 25px;
+  color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px 10px var(--theme-shadow);
+}
+.register-btn:hover {
+  opacity: 0.8;
+  transition: 0.2s ease;
+}
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 400px;
+    height: 500px;
+    background: url('https://cdn.dribbble.com/users/537878/screenshots/14511603/poem-1---c_4x.gif?compress=1&resize=400x300');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+.right .loginwith {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #FFF;
+    text-align: center;
+}
+#existing-member{
+    position: absolute;
+    bottom: -35px;
+    left: 220px;
+    color: var(--theme-color);
+    font-size: 15px;
+}
